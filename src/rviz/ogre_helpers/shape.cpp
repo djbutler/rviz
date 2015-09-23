@@ -97,7 +97,7 @@ Shape::Shape( Type type, Ogre::SceneManager* scene_manager, Ogre::SceneNode* par
   ss << "Material";
   material_name_ = ss.str();
   material_ = Ogre::MaterialManager::getSingleton().create( material_name_, ROS_PACKAGE_NAME );
-  material_->setReceiveShadows(false);
+  material_->setReceiveShadows(true);
   material_->getTechnique(0)->setLightingEnabled(true);
   material_->getTechnique(0)->setAmbient( 0.5, 0.5, 0.5 );
 

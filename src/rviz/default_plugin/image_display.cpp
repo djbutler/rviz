@@ -99,7 +99,7 @@ void ImageDisplay::onInitialize()
     material_ = Ogre::MaterialManager::getSingleton().create( ss.str(), Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME );
     material_->setSceneBlending( Ogre::SBT_REPLACE );
     material_->setDepthWriteEnabled(false);
-    material_->setReceiveShadows(false);
+    material_->setReceiveShadows(true);
     material_->setDepthCheckEnabled(false);
 
     material_->getTechnique(0)->setLightingEnabled(false);

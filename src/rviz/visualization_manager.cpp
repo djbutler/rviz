@@ -277,7 +277,7 @@ void createColorMaterial(const std::string& name, const Ogre::ColourValue& color
     mat->setSelfIllumination(color);
   }
   mat->setLightingEnabled(true);
-  mat->setReceiveShadows(false);
+  mat->setReceiveShadows(true);
 }
 
 void VisualizationManager::createColorMaterials()

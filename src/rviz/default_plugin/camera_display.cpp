@@ -156,7 +156,7 @@ void CameraDisplay::onInitialize()
     bg_material_ = Ogre::MaterialManager::getSingleton().create( ss.str(), Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME );
     bg_material_->setDepthWriteEnabled(false);
 
-    bg_material_->setReceiveShadows(false);
+    bg_material_->setReceiveShadows(true);
     bg_material_->setDepthCheckEnabled(false);
 
     bg_material_->getTechnique(0)->setLightingEnabled(false);

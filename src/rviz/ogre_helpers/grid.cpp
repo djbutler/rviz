@@ -70,7 +70,7 @@ Grid::Grid( Ogre::SceneManager* scene_manager, Ogre::SceneNode* parent_node, Sty
 
   ss << "Material";
   material_ = Ogre::MaterialManager::getSingleton().create( ss.str(), Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME );
-  material_->setReceiveShadows(false);
+  material_->setReceiveShadows(true);
   material_->getTechnique(0)->setLightingEnabled(false);
 
   setColor(color_);

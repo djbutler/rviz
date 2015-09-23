@@ -207,7 +207,7 @@ RobotLink::RobotLink( Robot* robot,
   static int count = 1;
   ss << "robot link color material " << count;
   color_material_ = Ogre::MaterialManager::getSingleton().create( ss.str(), ROS_PACKAGE_NAME );
-  color_material_->setReceiveShadows(false);
+  color_material_->setReceiveShadows(true);
   color_material_->getTechnique(0)->setLightingEnabled(true);
 
   // create the ogre objects to display

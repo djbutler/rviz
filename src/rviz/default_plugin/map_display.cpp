@@ -239,7 +239,7 @@ void MapDisplay::onInitialize()
   material_ = Ogre::MaterialManager::getSingleton().getByName("rviz/Indexed8BitImage");
   material_ = material_->clone( ss.str() );
 
-  material_->setReceiveShadows(false);
+  material_->setReceiveShadows(true);
   material_->getTechnique(0)->setLightingEnabled(false);
   material_->setDepthBias( -16.0f, 0.0f );
   material_->setCullingMode( Ogre::CULL_NONE );

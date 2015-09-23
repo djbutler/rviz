@@ -68,7 +68,7 @@ BillboardLine::BillboardLine( Ogre::SceneManager* scene_manager, Ogre::SceneNode
   std::stringstream ss;
   ss << "BillboardLineMaterial" << count++;
   material_ = Ogre::MaterialManager::getSingleton().create( ss.str(), Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME );
-  material_->setReceiveShadows(false);
+  material_->setReceiveShadows(true);
   material_->getTechnique(0)->setLightingEnabled(false);
 
   setNumLines(num_lines_);
