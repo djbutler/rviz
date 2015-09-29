@@ -45,6 +45,10 @@
 
 #include "rviz/default_plugin/tools/interaction_tool.h"
 
+#include <iostream>
+#include <ros/ros.h>
+#include <std_msgs/Header.h>
+
 namespace rviz
 {
 
@@ -54,6 +58,7 @@ InteractionTool::InteractionTool()
   hide_inactive_property_ = new BoolProperty("Hide Inactive Objects", true,
                                              "While holding down a mouse button, hide all other Interactive Objects.",
                                              getPropertyContainer(), SLOT( hideInactivePropertyChanged() ), this );
+  vis_pub_ = node_handle_.advertise<std_msgs::Header>("picard_rviz_dragging", 0);
 }
 
 InteractionTool::~InteractionTool()
@@ -161,6 +166,12 @@ int InteractionTool::processMouseEvent( ViewportMouseEvent& event )
 
   {
     InteractiveObjectPtr focused_object = focused_object_.lock();
+    if (dragging && !focused_object) {
+        // std::cout << "dragging" << std::endl;
+        std_msgs::Header header;
+        header.stamp = ros::Time::now();
+        vis_pub_.publish(header);
+    }
     if( focused_object )
     {
       focused_object->handleMouseEvent( event );

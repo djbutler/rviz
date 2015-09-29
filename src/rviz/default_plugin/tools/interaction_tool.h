@@ -33,6 +33,7 @@
 #include <stdint.h>
 
 #include <ros/subscriber.h>
+#include <ros/ros.h>
 
 #include <rviz/interactive_object.h>
 
@@ -77,6 +78,10 @@ protected:
   MoveTool move_tool_;
 
   BoolProperty *hide_inactive_property_;
+
+  ros::NodeHandle node_handle_;
+  ros::Publisher vis_pub_;
+
 };
 
 }
