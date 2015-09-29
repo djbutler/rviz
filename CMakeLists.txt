@@ -64,6 +64,7 @@ find_package(OpenGL REQUIRED)
 
 find_package(PythonLibs REQUIRED)
 
+set(QT_QMAKE_EXECUTABLE /usr/share/qt4/bin/qmake)
 find_package(Qt4 REQUIRED COMPONENTS QtCore QtGui QtOpenGL)
 
 find_package(urdfdom REQUIRED)
