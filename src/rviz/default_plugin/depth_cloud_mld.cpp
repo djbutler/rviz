@@ -351,9 +351,11 @@ template<typename T>
 
             // reduce color intensity in shadow buffer
             RGBA* color = reinterpret_cast<RGBA*>(cloud_shadow_buffer_ptr + sizeof(float) * 3);
+            /*
             color->red /= 2;
             color->green /= 2;
             color->blue /= 2;
+            */
 
             // update shadow depth & time out
             shadow_depth_[point_idx] = depth;
