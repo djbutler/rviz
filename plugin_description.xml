@@ -200,7 +200,7 @@
     <message_type>geometry_msgs/WrenchStamped</message_type>
   </class>
 
-  <class name="rviz/PublishPoint" type="rviz::PointTool" base_class_type="rviz::Tool">
+  <class name="rviz/PlaceGripper" type="rviz::PointTool" base_class_type="rviz::Tool">
     <description>
       Allows you to click on a point and publish it as a PointStamped message.
     </description>

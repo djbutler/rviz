@@ -55,15 +55,7 @@ Visualization Manager:
   Tools:
     - Class: rviz/Interact
       Hide Inactive Objects: true
-    - Class: rviz/MoveCamera
-    - Class: rviz/Select
-    - Class: rviz/FocusCamera
-    - Class: rviz/Measure
-    - Class: rviz/SetInitialPose
-      Topic: /initialpose
-    - Class: rviz/SetGoal
-      Topic: /move_base_simple/goal
-    - Class: rviz/PublishPoint
+    - Class: rviz/PlaceGripper
       Single click: true
       Topic: /clicked_point
   Value: true
