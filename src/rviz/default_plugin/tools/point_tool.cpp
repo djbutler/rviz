@@ -52,6 +52,7 @@ namespace rviz
 PointTool::PointTool()
   : Tool()
 {
+  shortcut_key_ = 'p';
   topic_property_ = new StringProperty( "Topic", "/clicked_point",
                                         "The topic on which to publish points.",
                                         getPropertyContainer(), SLOT( updateTopic() ), this );

@@ -41,7 +41,7 @@ namespace rviz
 
 InitialPoseTool::InitialPoseTool()
 {
-  shortcut_key_ = 'p';
+  //shortcut_key_ = 'p';
 
   topic_property_ = new StringProperty( "Topic", "initialpose",
                                         "The topic on which to publish initial pose estimates.",
